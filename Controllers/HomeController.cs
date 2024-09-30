@@ -23,6 +23,11 @@ namespace PartyInvites.Controllers
             return View();
         }
 
+        public string Contact()
+        {
+            return "Contact information is not currently available";
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
