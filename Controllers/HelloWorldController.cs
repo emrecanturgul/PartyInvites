@@ -15,6 +15,7 @@ namespace PartyInvites.Controllers
         // GET: /HelloWorld/Welcome
         public ViewResult Welcome()
         {
+            ViewBag.Title = "Welcome from Hello World";
             return View();
         }
     }
