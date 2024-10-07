@@ -32,7 +32,7 @@ namespace PartyInvites.Controllers
         [HttpPost]
         public IActionResult Register(GuestResponse response)
         {
-            return View("RegisterComplete");
+            return View("RegisterComplete", response);
         }
 
         public string Contact()
