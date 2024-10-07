@@ -23,11 +23,17 @@ namespace PartyInvites.Controllers
             return View();
         }
 
+        // GET: /Home/Register
         public IActionResult Register()
         {
             return View();
         }
 
+        [HttpPost]
+        public IActionResult Register(GuestResponse response)
+        {
+            return View("RegisterComplete");
+        }
 
         public string Contact()
         {
