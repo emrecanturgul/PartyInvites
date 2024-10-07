@@ -1,9 +1,36 @@
-﻿
+﻿@model GuestResponse
+
 @{
     ViewData["Title"] = "Register";
 }
 
 <h1>@ViewBag.Title</h1>
 <h2>Are you comming to the party?</h2>
+
+<form asp-action="Register">
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label"></label>
+        <input asp-for="Name" class="form-control"
+               placeholder="Enter your name" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Email" class="form-label"></label>
+        <input asp-for="Email" class="form-control"
+               placeholder="Enter your email" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Phone" class="form-label"></label>
+        <input asp-for="Phone" class="form-control"
+               placeholder="Enter your phone" />
+    </div>
+    <div class="mb-3">        
+        <input type="checkbox" asp-for="WillAttend"
+               class="form-check-input"
+               placeholder="Enter your name" />
+        <label asp-for="WillAttend" class="form-check-label">I'm going to the party</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>
 
 
