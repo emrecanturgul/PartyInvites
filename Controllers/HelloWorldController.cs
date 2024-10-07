@@ -21,7 +21,7 @@ namespace PartyInvites.Controllers
                 timeOfDay = "night";
             }
 
-            ViewBag.Message = $"Hello from the server. At the server location now is {timeOfDay}.";
+            ViewBag.TimeOfDay = timeOfDay;
 
             return View();
         }
