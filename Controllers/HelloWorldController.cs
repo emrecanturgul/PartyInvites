@@ -6,9 +6,24 @@ namespace PartyInvites.Controllers
     {
         //
         // GET: /HelloWorld/
-        public string Index()
+        public IActionResult Index()
         {
-            return "Hello World !!!";
+            DateTime dateTime = DateTime.Now;
+
+            int hour = dateTime.Hour;
+
+            string timeOfDay;
+            if (hour >= 6 && hour <= 12) {
+                timeOfDay = "morning";
+            } else if (hour > 12 && hour < 20) {
+                timeOfDay = "afternoon";
+            } else {
+                timeOfDay = "night";
+            }
+
+            ViewBag.Message = $"Hello from the server. At the server location now is {timeOfDay}.";
+
+            return View();
         }
 
         //
