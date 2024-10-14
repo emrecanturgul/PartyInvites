@@ -1,0 +1,29 @@
+@model IEnumerable<GuestResponse>
+
+@{
+ViewData["Title"] = "List of responses";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<table>
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Email</th>
+        <th>WillAttend</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var r in Model)
+    {
+    <tr>
+        <td>@r.Name</td>
+        <td>@r.Phone</td>
+        <td>@r.Email</td>
+        <td>@r.IsAttending</td>
+    </tr>
+    }
+    </tbody>
+</table>
