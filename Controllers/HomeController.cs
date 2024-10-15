@@ -44,6 +44,14 @@ namespace PartyInvites.Controllers
             return View("NoRegisteredResponses");
             
         }
+
+        public IActionResult PeopleAttending()
+        {
+            var peopleAttending = 
+                Repository.Responses().Where(r => r.WillAttend == true);
+            return View("ListResponses", peopleAttending);
+        }
+        
         public string Contact()
         {
             return "Contact information is not currently available";
