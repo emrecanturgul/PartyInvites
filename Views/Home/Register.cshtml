@@ -23,11 +23,14 @@
         <input asp-for="Phone" class="form-control"
                placeholder="Enter your phone" />
     </div>
-    <div class="mb-3">        
-        <input type="checkbox" asp-for="WillAttend"
-               class="form-check-input"
-               placeholder="Enter your name" />
-        <label asp-for="WillAttend" class="form-check-label">I'm going to the party</label>
+    <div class="mb-3">
+        <label asp-for="WillAttend" class="form-check-label">Are you going to attend the party?</label>
+        <select asp-for = "WillAttend" class="form-select">
+            <option value="">Maybe</option>
+            <option value="True">Yes</option>
+            <option value="False">No</option>
+        </select>
+
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
     <a asp-action="Index" class="btn btn-secondary">Cancel</a>

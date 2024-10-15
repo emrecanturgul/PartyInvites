@@ -36,6 +36,14 @@ namespace PartyInvites.Controllers
             return View("RegisterComplete", response);
         }
 
+        public IActionResult ListResponses()
+        {
+            if (Repository.Responses().Any()) {
+                return View(Repository.Responses());
+            }
+            return View("NoRegisteredResponses");
+            
+        }
         public string Contact()
         {
             return "Contact information is not currently available";
